@@ -11,8 +11,8 @@ def generate_transaction_recap():
         print("Invalid choice. Please select 1 or 2.")
         choice = input("Enter your choice (1 or 2): ")
 
-    border = "=" * 60
-    empty_line = "||" + " " * 56 + "||"
+    border = "=" * 47 #  60
+    empty_line = "||" # + " " * 56 + "||"
 
     if choice == '1':
 
@@ -56,19 +56,19 @@ def generate_transaction_recap():
 
         print(f"\n{border}")
         print(empty_line)
-        print("||" + " " * 20 + "TRANSFERT D'ARGENT" + " " * 18 + "||")
-        print("||" + " " * 24 + "FCFA ==> DH" + " " * 21 + "||")
+        print("||" + " " * 20 + "TRANSFERT D'ARGENT") # + " " * 18 + "||")
+        print("||" + " " * 24 + "FCFA ==> DH") # + " " * 21 + "||")
         print(empty_line)
         print(empty_line)
-        print(f"|| MONTANT                 =====>   {amount:>10.2f} FCFA") # + " " * after_amount_space + "||")
+        print(f"|| MONTANT            =====>   {amount:>10.2f} FCFA") # + " " * after_amount_space + "||")
         print(empty_line)
-        print(f"|| FRAIS DE TRANSFERT      =====>   {transfer_fee:>10.2f} FCFA") # + " " * after_amount_space + "||")
-        print(f"|| FRAIS ORANGE M.         =====>   {orange_fee:>10.2f} FCFA") # + " " * after_amount_space + "||")
+        print(f"|| FRAIS DE TRANSFERT  =====>   {transfer_fee:>10.2f} FCFA") # + " " * after_amount_space + "||")
+        print(f"|| FRAIS ORANGE M.     =====>   {orange_fee:>10.2f} FCFA") # + " " * after_amount_space + "||")
         print(empty_line)
         print(empty_line)
-        print("|| TOTAL EN DH" + " " * 44 + "||")
-        print(f"||   FRAIS INCLUS          =====>   {total_inclusive_fees:>10.2f} DH") # + " " * transfer_fee_space + "||")
-        print(f"||   FRAIS EXCLUS          =====>   {total_exclusive_fess:>10.2f} DH") # + " " * transfer_fee_space + "||")
+        print("|| TOTAL EN DH") # + " " * 44 + "||")
+        print(f"||   FRAIS INCLUS    =====>   {total_inclusive_fees:>10.2f} DH") # + " " * transfer_fee_space + "||")
+        print(f"||   FRAIS EXCLUS    =====>   {total_exclusive_fess:>10.2f} DH") # + " " * transfer_fee_space + "||")
         print(empty_line)
         print(empty_line)
         print(empty_line)
@@ -112,19 +112,19 @@ def generate_transaction_recap():
 
         print(f"\n{border}")
         print(empty_line)
-        print("||" + " " * 20 + "TRANSFERT D'ARGENT" + " " * 18 + "||")
-        print("||" + " " * 24 + "DH ==> FCFA" + " " * 21 + "||")
+        print("||" + " " * 20 + "TRANSFERT D'ARGENT") # + " " * 18 + "||")
+        print("||" + " " * 24 + "DH ==> FCFA") # + " " * 21 + "||")
         print(empty_line)
         print(empty_line)
-        print(f"|| MONTANT                 =====>   {amount:>10.2f} DH") # + " " * after_amount_space + "||")
+        print(f"|| MONTANT            =====>   {amount:>10.2f} DH") # + " " * after_amount_space + "||")
         print(empty_line)
-        print(f"|| FRAIS DE TRANSFERT      =====>   {transfer_fee:>10.2f} DH") #+ " " * after_amount_space + "||")
-        print(f"|| FRAIS ORANGE M.         =====>   {orange_fee:>10.2f} DH") #+ " " * after_amount_space + "||")
+        print(f"|| FRAIS DE TRANSFERT =====>   {transfer_fee:>10.2f} DH") #+ " " * after_amount_space + "||")
+        print(f"|| FRAIS ORANGE M.    =====>   {orange_fee:>10.2f} DH") #+ " " * after_amount_space + "||")
         print(empty_line)
         print(empty_line)
-        print("|| TOTAL EN FCFA" + " " * 42 + "||")
-        print(f"||   FRAIS INCLUS          =====>   {total_inclusive_fees:>10.2f} FCFA") # + " " * transfer_fee_space + "||")
-        print(f"||   FRAIS EXCLUS          =====>   {total_exclusive_fess:>10.2f} FCFA") # + " " * transfer_fee_space + "||")
+        print("|| TOTAL EN FCFA") # + " " * 42 + "||")
+        print(f"||   FRAIS INCLUS     =====>   {total_inclusive_fees:>10.2f} FCFA") # + " " * transfer_fee_space + "||")
+        print(f"||   FRAIS EXCLUS     =====>   {total_exclusive_fess:>10.2f} FCFA") # + " " * transfer_fee_space + "||")
         print(empty_line)
         print(empty_line)
         print(empty_line)
