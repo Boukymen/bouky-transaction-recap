@@ -2,8 +2,8 @@
 
 def generate_transaction_recap():
     print("Select conversion direction:")
-    print("1. FCFA to DH")
-    print("2. DH to FCFA")
+    print("1. 🅵🅲🅵🅰 to 🅳🅷")
+    print("2. 🅳🅷 to 🅵🅲🅵🅰")
     choice = input("Enter your choice (1 or 2): ")
 
     # while loop to ensure valid input
@@ -11,22 +11,22 @@ def generate_transaction_recap():
         print("Invalid choice. Please select 1 or 2.")
         choice = input("Enter your choice (1 or 2): ")
 
-    border = "=" * 47 #  60
+    border = "=" * 48 #  60
     empty_line = "||" # + " " * 56 + "||"
 
     if choice == '1':
 
-        # ask if the amount is in FCFA or DH
-        print("\nYou have selected FCFA to DH conversion.")
+        # ask if the amount is in 🅵🅲🅵🅰 or 🅳🅷
+        print("\nYou have selected 🅵🅲🅵🅰 to 🅳🅷 conversion.")
         print("|"
-              "\nthe amount is in FCFA or DH ?")
-        choice2 = input("Enter 1 for FCFA or 2 for DH: ")
+              "\nthe amount is in 🅵🅲🅵🅰 or 🅳🅷 ?")
+        choice2 = input("Enter 1 for 🅵🅲🅵🅰 or 2 for 🅳🅷: ")
         while choice2 not in ['1', '2']:
-            choice2 = input("Enter 1 for FCFA or 2 for DH: ")
+            choice2 = input("Enter 1 for 🅵🅲🅵🅰 or 2 for 🅳🅷: ")
 
 
-        # message = choice2 == 1 ? "You have selected FCFA to DH conversion." : "You have selected DH to FCFA conversion."
-        message = "\nEnter your amount in FCFA : " if choice2 == '1' else "\nEnter your amount in DH : "
+        # message = choice2 == 1 ? "You have selected 🅵🅲🅵🅰 to 🅳🅷 conversion." : "You have selected 🅳🅷 to 🅵🅲🅵🅰 conversion."
+        message = "\nEnter your amount in 🅵🅲🅵🅰 : " if choice2 == '1' else "\nEnter your amount in 🅳🅷 : "
         amount = float(input(message))
 
         #  if the amount is not a valid number, prompt again
@@ -51,24 +51,24 @@ def generate_transaction_recap():
             amount = total_exclusive_fess_temp
 
         after_amount_space = 13 - len(str(int(amount)))
-        transfer_fee_space = 14 - len(str(int(transfer_fee)))
+        transfer_fee_space = 14 - len(str(int(transfer_fee))) # 🅰🅱🅲🅳🅴🅵🅶🅷🅸🅹🅺🅻🅼🅽🅾🅿🆀🆁🆂🆃🆄🆅🆆🆇🆈🆉
 
 
         print(f"\n{border}")
         print(empty_line)
-        print("||" + " " * 20 + "TRANSFERT D'ARGENT") # + " " * 18 + "||")
-        print("||" + " " * 24 + "FCFA ==> DH") # + " " * 21 + "||")
+        print("||" + " " * 20 + "\033[1m\033[4mTRANSFERT D'ARGENT\033[0m\033[0m") # + " " * 18 + "||")
+        print("||" + " " * 21 + "\033[1m🅵🅲🅵🅰 ==> 🅳🅷\033[0m") # + " " * 21 + "||")
         print(empty_line)
         print(empty_line)
-        print(f"|| MONTANT            =====>   {amount:>10.2f} FCFA") # + " " * after_amount_space + "||")
+        print(f"|| \033[1mMONTANT\033[0m            =====> \033[93m\033[1m{amount:>10.2f} 🅵🅲🅵🅰\033[0m\033[0m") # + " " * after_amount_space + "||")
         print(empty_line)
-        print(f"|| FRAIS DE TRANSFERT  =====>   {transfer_fee:>10.2f} FCFA") # + " " * after_amount_space + "||")
-        print(f"|| FRAIS ORANGE M.     =====>   {orange_fee:>10.2f} FCFA") # + " " * after_amount_space + "||")
+        print(f"|| FRAIS DE TRANSFERT =====> \033[94m\033[1m{transfer_fee:>10.2f} 🅵🅲🅵🅰\033[0m\033[0m") # + " " * after_amount_space + "||")
+        print(f"|| FRAIS ORANGE M.    =====> \033[94m\033[1m{orange_fee:>10.2f} 🅵🅲🅵🅰\033[0m\033[0m") # + " " * after_amount_space + "||")
         print(empty_line)
         print(empty_line)
-        print("|| TOTAL EN DH") # + " " * 44 + "||")
-        print(f"||   FRAIS INCLUS    =====>   {total_inclusive_fees:>10.2f} DH") # + " " * transfer_fee_space + "||")
-        print(f"||   FRAIS EXCLUS    =====>   {total_exclusive_fess:>10.2f} DH") # + " " * transfer_fee_space + "||")
+        print("|| \033[1mTOTAL EN 🅳🅷\033[0m") # + " " * 44 + "||")
+        print(f"||   FRAIS INCLUS   =====> \033[92m\033[1m{total_inclusive_fees:>10.2f} 🅳🅷\033[0m\033[0m") # + " " * transfer_fee_space + "||")
+        print(f"||   FRAIS EXCLUS   =====> \033[92m\033[1m{total_exclusive_fess:>10.2f} 🅳🅷\033[0m\033[0m") # + " " * transfer_fee_space + "||")
         print(empty_line)
         print(empty_line)
         print(empty_line)
@@ -76,16 +76,16 @@ def generate_transaction_recap():
 
     elif choice == '2':
 
-        # ask if the amount is in FCFA or DH
-        print("\nYou have selected DH to FCFA conversion.")
+        # ask if the amount is in 🅵🅲🅵🅰 or 🅳🅷
+        print("\nYou have selected 🅳🅷 to 🅵🅲🅵🅰 conversion.")
         print("|"
-              "\nthe amount is in DH or FCFA ?")
-        choice2 = input("Enter 1 for DH or 2 for FCFA: ")
+              "\nthe amount is in 🅳🅷 or 🅵🅲🅵🅰 ?")
+        choice2 = input("Enter 1 for 🅳🅷 or 2 for 🅵🅲🅵🅰: ")
         while choice2 not in ['1', '2']:
-            choice2 = input("Enter 1 for DH or 2 for FCFA: ")
+            choice2 = input("Enter 1 for 🅳🅷 or 2 for 🅵🅲🅵🅰: ")
 
 
-        message = "\nEnter your amount in DH : " if choice2 == '1' else "\nEnter your amount in FCFA : "
+        message = "\nEnter your amount in 🅳🅷 : " if choice2 == '1' else "\nEnter your amount in 🅵🅲🅵🅰 : "
         amount = float(input(message))
         #  if the amount is not a valid number, prompt again
         while amount <= 0:
@@ -112,19 +112,19 @@ def generate_transaction_recap():
 
         print(f"\n{border}")
         print(empty_line)
-        print("||" + " " * 20 + "TRANSFERT D'ARGENT") # + " " * 18 + "||")
-        print("||" + " " * 24 + "DH ==> FCFA") # + " " * 21 + "||")
+        print("||" + " " * 20 + "\033[1m\033[4mTRANSFERT D'ARGENT\033[0m\033[0m") # + " " * 18 + "||")
+        print("||" + " " * 21 + "\033[1m🅳🅷 ==> 🅵🅲🅵🅰\033[0m") # + " " * 21 + "||")
         print(empty_line)
         print(empty_line)
-        print(f"|| MONTANT            =====>   {amount:>10.2f} DH") # + " " * after_amount_space + "||")
+        print(f"|| \033[1mMONTANT\033[0m            =====> \033[93m\033[1m{amount:>10.2f} 🅳🅷\033[0m\033[0m") # + " " * after_amount_space + "||")
         print(empty_line)
-        print(f"|| FRAIS DE TRANSFERT =====>   {transfer_fee:>10.2f} DH") #+ " " * after_amount_space + "||")
-        print(f"|| FRAIS ORANGE M.    =====>   {orange_fee:>10.2f} DH") #+ " " * after_amount_space + "||")
+        print(f"|| FRAIS DE TRANSFERT =====> \033[94m\033[1m{transfer_fee:>10.2f} 🅳🅷\033[0m\033[0m") #+ " " * after_amount_space + "||")
+        print(f"|| FRAIS ORANGE M.    =====> \033[94m\033[1m{orange_fee:>10.2f} 🅳🅷\033[0m\033[0m") #+ " " * after_amount_space + "||")
         print(empty_line)
         print(empty_line)
-        print("|| TOTAL EN FCFA") # + " " * 42 + "||")
-        print(f"||   FRAIS INCLUS     =====>   {total_inclusive_fees:>10.2f} FCFA") # + " " * transfer_fee_space + "||")
-        print(f"||   FRAIS EXCLUS     =====>   {total_exclusive_fess:>10.2f} FCFA") # + " " * transfer_fee_space + "||")
+        print("|| \033[1mTOTAL EN 🅵🅲🅵🅰\033[0m") # + " " * 42 + "||")
+        print(f"||   FRAIS INCLUS  =====> \033[92m\033[1m{total_inclusive_fees:>10.2f} 🅵🅲🅵🅰\033[0m\033[0m") # + " " * transfer_fee_space + "||")
+        print(f"||   FRAIS EXCLUS  =====> \033[92m\033[1m{total_exclusive_fess:>10.2f} 🅵🅲🅵🅰\033[0m\033[0m") # + " " * transfer_fee_space + "||")
         print(empty_line)
         print(empty_line)
         print(empty_line)
