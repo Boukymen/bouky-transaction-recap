@@ -41,12 +41,14 @@ def generate_transaction_recap():
             transfer_fee = amount * 0.025
             orange_fee = amount * 0.02
             total_inclusive_fees = (amount - transfer_fee - orange_fee) / 63
+            transfer_inclusive_fees = (amount - transfer_fee) / 63
             total_exclusive_fess = amount / 63
         else:
             transfer_fee = amount * 0.025 * 63
             orange_fee = amount * 0.02 * 63
             total_exclusive_fess_temp = amount * 63
             total_inclusive_fees = amount - (amount * 0.025) - (amount * 0.02)
+            transfer_inclusive_fees = amount - (amount * 0.025)
             total_exclusive_fess = amount
             amount = total_exclusive_fess_temp
 
@@ -56,8 +58,8 @@ def generate_transaction_recap():
 
         print(f"\n{border}")
         print(empty_line)
-        print("||" + " " * 20 + "\033[1m\033[4mTRANSFERT D'ARGENT\033[0m\033[0m") # + " " * 18 + "||")
-        print("||" + " " * 21 + "\033[1m🅵🅲🅵🅰 ==> 🅳🅷\033[0m") # + " " * 21 + "||")
+        print("||" + " " * 17 + "\033[1m\033[4mTRANSFERT D'ARGENT\033[0m\033[0m") # + " " * 18 + "||")
+        print("||" + " " * 18 + "\033[1m🅵🅲🅵🅰 ==> 🅳🅷\033[0m") # + " " * 21 + "||")
         print(empty_line)
         print(empty_line)
         print(f"|| \033[1mMONTANT\033[0m            =====> \033[93m\033[1m{amount:>10.2f} 🅵🅲🅵🅰\033[0m\033[0m") # + " " * after_amount_space + "||")
@@ -67,7 +69,8 @@ def generate_transaction_recap():
         print(empty_line)
         print(empty_line)
         print("|| \033[1mTOTAL EN 🅳🅷\033[0m") # + " " * 44 + "||")
-        print(f"||   FRAIS INCLUS   =====> \033[92m\033[1m{total_inclusive_fees:>10.2f} 🅳🅷\033[0m\033[0m") # + " " * transfer_fee_space + "||")
+        print(f"||   FRAIS T. INCLUS   =====> \033[92m\033[1m{transfer_inclusive_fees:>10.2f} 🅳🅷\033[0m\033[0m") # + " " * transfer_fee_space + "||")
+        print(f"||   TOUT FRAIS INCLUS   =====> \033[92m\033[1m{total_inclusive_fees:>10.2f} 🅳🅷\033[0m\033[0m") # + " " * transfer_fee_space + "||")
         print(f"||   FRAIS EXCLUS   =====> \033[92m\033[1m{total_exclusive_fess:>10.2f} 🅳🅷\033[0m\033[0m") # + " " * transfer_fee_space + "||")
         print(empty_line)
         print(empty_line)
@@ -98,12 +101,14 @@ def generate_transaction_recap():
             transfer_fee = amount * 0.025
             orange_fee = amount * 0.02
             total_inclusive_fees = (amount - transfer_fee - orange_fee) * 60
+            transfer_inclusive_fees = (amount - transfer_fee) * 60
             total_exclusive_fess = amount * 60
         else:
             transfer_fee = amount * 0.025 / 60
             orange_fee = amount * 0.02 / 60
             total_exclusive_fess_temp = amount / 60
             total_inclusive_fees = amount - (amount * 0.025) - (amount * 0.02)
+            transfer_inclusive_fees = amount - (amount * 0.025)
             total_exclusive_fess = amount
             amount = total_exclusive_fess_temp
 
@@ -112,8 +117,8 @@ def generate_transaction_recap():
 
         print(f"\n{border}")
         print(empty_line)
-        print("||" + " " * 20 + "\033[1m\033[4mTRANSFERT D'ARGENT\033[0m\033[0m") # + " " * 18 + "||")
-        print("||" + " " * 21 + "\033[1m🅳🅷 ==> 🅵🅲🅵🅰\033[0m") # + " " * 21 + "||")
+        print("||" + " " * 17 + "\033[1m\033[4mTRANSFERT D'ARGENT\033[0m\033[0m") # + " " * 18 + "||")
+        print("||" + " " * 18 + "\033[1m🅳🅷 ==> 🅵🅲🅵🅰\033[0m") # + " " * 21 + "||")
         print(empty_line)
         print(empty_line)
         print(f"|| \033[1mMONTANT\033[0m            =====> \033[93m\033[1m{amount:>10.2f} 🅳🅷\033[0m\033[0m") # + " " * after_amount_space + "||")
@@ -123,7 +128,8 @@ def generate_transaction_recap():
         print(empty_line)
         print(empty_line)
         print("|| \033[1mTOTAL EN 🅵🅲🅵🅰\033[0m") # + " " * 42 + "||")
-        print(f"||   FRAIS INCLUS  =====> \033[92m\033[1m{total_inclusive_fees:>10.2f} 🅵🅲🅵🅰\033[0m\033[0m") # + " " * transfer_fee_space + "||")
+        print(f"||   FRAIS T. INCLUS  =====> \033[92m\033[1m{transfer_inclusive_fees:>10.2f} 🅵🅲🅵🅰\033[0m\033[0m") # + " " * transfer_fee_space + "||")
+        print(f"||   TOUT FRAIS INCLUS  =====> \033[92m\033[1m{total_inclusive_fees:>10.2f} 🅵🅲🅵🅰\033[0m\033[0m") # + " " * transfer_fee_space + "||")
         print(f"||   FRAIS EXCLUS  =====> \033[92m\033[1m{total_exclusive_fess:>10.2f} 🅵🅲🅵🅰\033[0m\033[0m") # + " " * transfer_fee_space + "||")
         print(empty_line)
         print(empty_line)
